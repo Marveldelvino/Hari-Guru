@@ -1,0 +1,141 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan Layout Utama */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: white; /* Mengubah warna teks di seluruh body menjadi putih */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center; /* Menambahkan text-align center untuk memastikan semua teks terpusat */
+    background-image: url('https://www.w3schools.com/w3images/forest.jpg'); /* Gambar alam */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: white; /* Warna putih untuk judul */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #ccc; /* Warna teks deskripsi lebih terang agar tidak terlalu kontras */
+}
+
+header .panda-gif {
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Konten Utama */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikal tengah */
+    align-items: center;     /* Horizontal tengah */
+    height: 50%;             /* Menjaga agar konten tetap terpusat */
+    text-align: center;      /* Teks di dalam .content akan terpusat */
+}
+
+/* Animasi Teks */
+.content .typing-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white; /* Mengubah warna teks menjadi putih */
+    margin-bottom: 20px;
+    display: inline-block;
+    border-right: 3px solid white; /* Warna kursor menjadi putih */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+/* Tombol */
+.btn-love {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-love:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Memberikan latar belakang footer dengan transparansi hitam */
+    border-top: 1px solid #333; /* Garis batas footer yang lebih jelas */
+    font-size: 0.9rem;
+    color: white; /* Warna teks footer menjadi putih */
+}
+
+/* Responsif - Mobile dan Tablet */
+@media (max-width: 768px) {
+    .content .typing-text {
+        font-size: 1.2rem; /* Ukuran font lebih kecil untuk perangkat mobile */
+    }
+
+    .btn-love {
+        padding: 10px 20px;
+        font-size: 0.9rem; /* Ukuran font tombol lebih kecil */
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
